@@ -15,7 +15,7 @@ class ListAllUsersUseCase {
       throw new Error("User not found");
     }
 
-    if (user && !user.admin) {
+    if (user.admin === false) {
       throw new Error("User is not an admin");
     }
 
